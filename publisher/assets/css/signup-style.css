@@ -1,0 +1,443 @@
+/* File: /publisher/assets/css/signup-style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #4361ee;
+    --primary-hover: #3a56d4;
+    --secondary-color: #3f37c9;
+    --accent-color: #4cc9f0;
+    --dark-color: #0b132b;
+    --light-color: #f8f9fa;
+    --success-color: #4ade80;
+    --danger-color: #f43f5e;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --input-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+    --feature-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background: linear-gradient(135deg, #0b132b 0%, #3a0ca3 100%);
+    overflow-x: hidden;
+}
+
+.main-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 3rem 1rem;
+}
+
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.signup-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1140px;
+}
+
+.brand-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.brand-name {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin: 0;
+}
+
+.logo {
+    max-height: 70px;
+    width: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.brand-tagline {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.signup-card {
+    width: 100%;
+    max-width: 500px;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--card-shadow), 0 0 20px rgba(67, 97, 238, 0.3);
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.signup-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow), 0 0 30px rgba(67, 97, 238, 0.4);
+}
+
+.card-body {
+    padding: 2.5rem;
+}
+
+.portal-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 10px rgba(67, 97, 238, 0.2);
+}
+
+.portal-icon i {
+    font-size: 28px;
+    color: white;
+}
+
+.portal-title {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.portal-subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.custom-alert-danger {
+    background-color: rgba(244, 63, 94, 0.1);
+    color: var(--danger-color);
+    border: 1px solid rgba(244, 63, 94, 0.2);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.custom-alert-success {
+    background-color: rgba(74, 222, 128, 0.1);
+    color: var(--success-color);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-floating {
+    position: relative;
+}
+
+.form-floating > .custom-input {
+    height: 60px;
+    padding: 1rem 1rem 0.5rem 3rem;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    background-color: rgba(248, 249, 250, 0.8);
+    box-shadow: var(--input-shadow);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-floating > .custom-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(67, 97, 238, 0.25);
+}
+
+.form-floating > label {
+    padding: 1rem 0 0 3rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.form-floating > label i {
+    position: absolute;
+    left: 1rem;
+    top: 1.25rem;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.form-floating > .custom-input:focus ~ label i,
+.form-floating > .custom-input:not(:placeholder-shown) ~ label i {
+    color: var(--primary-color);
+}
+
+.password-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 1.25rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.password-toggle:hover {
+    color: var(--primary-color);
+}
+
+.form-check-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.terms-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.terms-link:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+.custom-btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    height: 54px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    padding: 0.8rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(67, 97, 238, 0.4);
+    background: linear-gradient(135deg, var(--primary-hover), var(--secondary-color));
+}
+
+.custom-btn-primary:active {
+    transform: translateY(1px);
+}
+
+.custom-btn-primary span {
+    z-index: 1;
+}
+
+.custom-btn-primary i {
+    margin-left: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.custom-btn-primary:hover i {
+    transform: translateX(3px);
+}
+
+.login-section {
+    margin-top: 2rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.login-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.login-link:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+/* Features section */
+.features-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: var(--feature-shadow);
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.feature-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+.feature-text h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--dark-color);
+}
+
+.feature-text p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* Modal customization */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 1.25rem 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 1.25rem 1.5rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+    .features-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-item {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .brand-name {
+        font-size: 2.5rem;
+    }
+    
+    .brand-tagline {
+        font-size: 1rem;
+    }
+    
+    .signup-card {
+        border-radius: 12px;
+    }
+    
+    .card-body {
+        padding: 1.8rem;
+    }
+    
+    .portal-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .portal-icon i {
+        font-size: 24px;
+    }
+    
+    .form-floating > .custom-input {
+        height: 55px;
+    }
+    
+    .feature-item {
+        padding: 1.25rem;
+    }
+    
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .feature-icon i {
+        font-size: 20px;
+    }
+}
+
+/* Animations */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
