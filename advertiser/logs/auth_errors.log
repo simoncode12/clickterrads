@@ -1,9 +1,0 @@
-2025-07-24 07:04:58 - Error: Table 'user_db.remember_tokens' doesn't exist
-Debug log: Auth attempt for username: Ad1 | User found, role: advertiser | Password verified successfully | Advertiser record count: 0 | Creating new advertiser record for user_id: 2 | Created new advertiser record with ID: 1
----------------------------------------------
-2025-07-24 07:19:11 - Error: Table 'user_db.remember_tokens' doesn't exist
-Debug log: Auth attempt for username: Ad1 | User found, role: advertiser | Password verified successfully | Advertiser record count: 1 | Retrieved advertiser ID: 1
----------------------------------------------
-2025-07-24 07:40:39 - Error: Table 'user_db.remember_tokens' doesn't exist
-Debug log: Auth attempt for username: Ad1 | User found, role: advertiser | Password verified successfully | Advertiser record count: 1 | Retrieved advertiser ID: 1
----------------------------------------------
